@@ -51,4 +51,13 @@ section > header {
 	float: left;
 	padding: 30px;
 }
+
+section > div {
+	width: 65%;
+	height: 100%;
+	float: right;
+}
+
+section > div img {
+	height: 100%;
 }
