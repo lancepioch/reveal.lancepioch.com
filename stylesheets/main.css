@@ -46,18 +46,24 @@ section.full {
 #main {
 	height: 375px;
 	background-color: #e74c3c;
+	padding: 0px;
 }
-section > header {
+
+#main > header {
+	padding: 30px;
 	width: 35%;
 	height: 100%;
 	float: left;
-	padding: 30px;
 }
 
-section > div {
+#main > div {
 	width: 65%;
 	height: 100%;
 	float: right;
+}
+
+#welcome {
+	background-color: #34495e;
 }
 
 section > div img {
