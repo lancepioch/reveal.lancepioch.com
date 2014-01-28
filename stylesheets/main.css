@@ -38,6 +38,7 @@ section {
 	height: 250px;
 	overflow: hidden;
 	margin-bottom: 20px;
+	padding: 30px;
 }
 
 section.full {
