@@ -115,3 +115,16 @@ section > div img {
 	vertical-align: middle;
 	font-size: 40px;
 }
+
+@media (max-width: 960px) {
+	html {
+		width: 100%;
+	}
+	body {
+		padding: 0px;
+	}
+	section {
+		width: 50%;
+		height: auto;
+	}
+}
