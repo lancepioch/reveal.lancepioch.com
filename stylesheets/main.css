@@ -147,4 +147,7 @@ section > div img {
 	section {
 		width: 100%;
 	}
+	#main > div > img {
+		margin-left: -100px;
+	}
 }
