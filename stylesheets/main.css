@@ -89,6 +89,18 @@ section.full {
 	background-color: #34495e;
 }
 
+#twitter {
+	background-color: #55acee;
+}
+
+#facebook {
+	background-color: #3B5998;
+}
+
+#github {
+	background-color: #333;
+}
+
 section > div img {
 	height: 100%;
 }
