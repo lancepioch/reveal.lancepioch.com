@@ -123,10 +123,14 @@ section > div img {
 	}
 	body {
 		padding: 0px;
+		margin: 0px;
 	}
 	section {
 		width: 50%;
 		height: auto;
+	}
+	#main {
+		margin-top: 0px;
 	}
 }
 
