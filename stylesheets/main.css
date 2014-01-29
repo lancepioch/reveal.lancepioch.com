@@ -147,7 +147,7 @@ section > div img {
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
 	section {
 		width: 100%;
 	}
