@@ -103,6 +103,18 @@ section.full {
 	background-color: #333;
 }
 
+#linkedin {
+	background-color: #0181B2;
+}
+
+#google-plus {
+	background-color: #C63D2D;
+}
+
+#skype {
+	background-color: #00aff0;
+}
+
 section > div img {
 	height: 100%;
 }
