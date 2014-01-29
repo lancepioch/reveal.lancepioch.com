@@ -58,6 +58,7 @@ section {
 	overflow: hidden;
 	margin-bottom: 20px;
 	padding: 30px;
+	float: left;
 }
 
 section.full {
