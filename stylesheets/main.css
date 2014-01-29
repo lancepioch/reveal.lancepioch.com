@@ -106,12 +106,12 @@ section > div img {
 }
 
 .icon {
-    display: table-cell;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    border: 2px solid;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 40px;
+	display: table-cell;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	border: 2px solid;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 40px;
 }
