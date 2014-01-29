@@ -128,3 +128,16 @@ section > div img {
 		height: auto;
 	}
 }
+
+@media (max-width: 700px) {
+	#main > header {
+		width: 100%;
+	}
+	#main > div {
+		width: 100%;
+		height: auto;
+	}
+	#main {
+		height: auto;
+	}
+}
