@@ -69,7 +69,8 @@ section.full {
 }
 
 .social {
-	width: calc(100% / 6);
+	width: 215px;
+	margin-right: 20px;
 	height: 150px;
 	line-height: 130px;
 	text-align: center;
@@ -81,6 +82,10 @@ section.full {
 	display: block;
 }
 
+.social.last {
+	margin-right: 0px;
+}
+
 #social-icons {
 	padding: 0px;
 	height: 150px;
@@ -88,6 +93,8 @@ section.full {
 
 #social-icons > ul {
 	padding: 0px;
+	margin: 0px;
+	height: 150px;
 }
 
 #main {
