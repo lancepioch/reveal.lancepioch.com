@@ -117,10 +117,6 @@ section.full {
 	background-color: #55acee;
 }
 
-#facebook {
-	background-color: #3B5998;
-}
-
 #github {
 	background-color: #333;
 }
@@ -131,10 +127,6 @@ section.full {
 
 #google-plus {
 	background-color: #C63D2D;
-}
-
-#skype {
-	background-color: #00aff0;
 }
 
 section > div img {
