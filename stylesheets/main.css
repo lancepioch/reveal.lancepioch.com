@@ -160,12 +160,23 @@ section > div img {
 		padding: 0px;
 		margin: 0px;
 	}
-	section {
-		width: 50%;
-		height: auto;
-	}
 	#main {
 		margin-top: 0px;
+	}
+	#social-icons {
+		height: 320px;
+	}
+	#twitter, #github {
+		width: calc(50% - 10px);
+		margin-right: 10px;
+	}
+	#google-plus, #linkedin {
+		width: calc(50% - 10px);
+		margin-left: 10px;
+		margin-right: 0px;
+	}
+	#twitter, #google-plus {
+		margin-bottom: 20px;
 	}
 }
 
