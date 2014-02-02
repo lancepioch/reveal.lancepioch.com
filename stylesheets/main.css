@@ -20,6 +20,31 @@ body {
 	background-color: #fff;
 }
 
+nav {
+	position: fixed;
+	left: 0px;
+	top: 30px;
+	list-style-type: none;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	width: 125px;
+}
+
+nav li {
+	margin-bottom: 5px;
+}
+
+nav li > a {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 18px;
+	width: 100%;
+	height: 100%;
+}
+
 footer {
 	color: #444;
 	text-align: center;
@@ -116,6 +141,10 @@ section.full {
 }
 
 .home { background-color: #e74c3c; }
+.about { background-color: #0088cc; }
+.services { background-color: #2ecc71; }
+.blog { background-color: #f1c40f; }
+.contact { background-color: #1abc9c; }
 .welcome { background-color: #34495e; }
 
 #twitter { background-color: #55acee; }
