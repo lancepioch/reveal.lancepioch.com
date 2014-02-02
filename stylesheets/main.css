@@ -168,6 +168,9 @@ section > div img {
 	line-height: 55px;
 }
 
+
+@media (max-width: 1250px) { nav { position: static; } }
+
 @media (max-width: 960px) {
 	html {
 		width: 100%;
