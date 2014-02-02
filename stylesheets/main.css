@@ -99,7 +99,6 @@ section.full {
 
 #main {
 	height: 375px;
-	background-color: #e74c3c;
 	padding: 0px;
 }
 
@@ -116,10 +115,8 @@ section.full {
 	float: right;
 }
 
-#welcome {
-	background-color: #34495e;
-}
-
+.home { background-color: #e74c3c; }
+.welcome { background-color: #34495e; }
 
 #twitter { background-color: #55acee; }
 #github { background-color: #333; }
