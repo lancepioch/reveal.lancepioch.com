@@ -35,7 +35,6 @@ nav li {
 	list-style-type: none;
 	margin: 0px 5px 5px 0px;
 	width: 125px;
-	float: left;
 }
 
 nav li > a {
@@ -169,7 +168,14 @@ section > div img {
 }
 
 
-@media (max-width: 1250px) { nav { position: static; } }
+@media (max-width: 1250px) {
+	nav {
+		position: static;
+	}
+	nav li {
+		float: left;
+	}
+}
 
 @media (max-width: 960px) {
 	html {
@@ -178,9 +184,6 @@ section > div img {
 	body {
 		padding: 0px;
 		margin: 0px;
-	}
-	#main {
-		margin-top: 0px;
 	}
 	#social-icons {
 		height: 320px;
