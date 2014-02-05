@@ -140,6 +140,11 @@ section.quarter.right { margin-left: 10px; margin-right: 0px; }
 .media { background-color: #8e44ad; }
 .page { background-color: #E56C19; }
 
+.cs { background-color: #5a25a2; }
+.java { background-color: #e76f00; }
+.php { background-color: #6e03c1; }
+.python { background-color: #3581ba; }
+
 .twitter { background-color: #55acee; }
 .github { background-color: #333; }
 .linkedin { background-color: #0181B2; }
