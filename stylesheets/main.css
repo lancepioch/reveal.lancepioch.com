@@ -87,34 +87,29 @@ section {
 	float: left;
 }
 
+section.half { width: calc(50% - 10px); }
+section.half.left { margin-right: 10px; }
+section.half.right { margin-left: 10px; }
+
+section.third { width: calc(100% / 3 - 40px / 3); margin-left: 10px; margin-right: 10px }
+section.third.left { margin-left: 0px; margin-right: 10px; }
+section.third.right { margin-left: 10px; margin-right: 0px; }
+
+section.quarter { width: calc(100% / 4 - 15px); margin-left: 10px; margin-right: 10px }
+section.quarter.left { margin-left: 0px; margin-right: 10px; }
+section.quarter.right { margin-left: 10px; margin-right: 0px; }
 
 .social {
-	width: 215px;
-	margin-right: 20px;
-	height: 150px;
-	line-height: 130px;
 	text-align: center;
-	float: left;
-	list-style-type: none;
+	line-height: 130px;
+	height: 150px;
+	padding: 0px;
 }
 
 .social > a {
 	display: block;
-}
-
-.social.last {
-	margin-right: 0px;
-}
-
-#social-icons {
-	padding: 0px;
-	height: 150px;
-}
-
-#social-icons > ul {
-	padding: 0px;
-	margin: 0px;
-	height: 150px;
+	width: 100%;
+	height: 100%;
 }
 
 #main {
@@ -142,10 +137,10 @@ section {
 .contact { background-color: #1abc9c; }
 .welcome { background-color: #34495e; }
 
-#twitter { background-color: #55acee; }
-#github { background-color: #333; }
-#linkedin { background-color: #0181B2; }
-#google-plus { background-color: #C63D2D; }
+.twitter { background-color: #55acee; }
+.github { background-color: #333; }
+.linkedin { background-color: #0181B2; }
+.google { background-color: #C63D2D; }
 
 section > div img {
 	height: 100%;
@@ -181,21 +176,6 @@ section > div img {
 		padding: 0px;
 		margin: 0px;
 	}
-	#social-icons {
-		height: 320px;
-	}
-	#twitter, #github {
-		width: calc(50% - 10px);
-		margin-right: 10px;
-	}
-	#google-plus, #linkedin {
-		width: calc(50% - 10px);
-		margin-left: 10px;
-		margin-right: 0px;
-	}
-	#twitter, #google-plus {
-		margin-bottom: 20px;
-	}
 }
 
 @media (max-width: 700px) {
@@ -208,6 +188,10 @@ section > div img {
 	}
 	#main {
 		height: auto;
+	}
+	.social {
+		line-height: 75px;
+		height: 75px;
 	}
 }
 
