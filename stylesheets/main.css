@@ -80,17 +80,13 @@ a:hover  {
 
 section {
 	width: 100%;
+	height: auto;
 	overflow: hidden;
 	margin: 10px 0px;
 	padding: 30px;
 	float: left;
 }
 
-section.full {
-	width: 100%;
-	height: auto;
-	margin: 10px 0px;
-}
 
 .social {
 	width: 215px;
