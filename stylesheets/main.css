@@ -136,6 +136,9 @@ section.quarter.right { margin-left: 10px; margin-right: 0px; }
 .blog { background-color: #f1c40f; }
 .contact { background-color: #1abc9c; }
 .welcome { background-color: #34495e; }
+.portfolio { background-color: #E671B5; }
+.media { background-color: #8e44ad; }
+.page { background-color: #E56C19; }
 
 .twitter { background-color: #55acee; }
 .github { background-color: #333; }
