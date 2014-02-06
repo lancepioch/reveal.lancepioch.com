@@ -28,22 +28,22 @@
 		</header>
 	</section>
 	<section class="welcome">
-	<div>
-		<h2 id="the-article">The Reference</h2>
+		<div>
+			<h2 id="the-article">The Reference</h2>
 
 			<p>(<a href="http://ssodelta.wordpress.com/2014/01/31/how-to-shuffle-a-playlist-correctly/">found here</a>)</p>
 
 			<blockquote>
-			  <p>A possible algorithm on a playlist of n songs might be:  </p>
-			  
-			  <ol>
-			  <li>Find random k such that gcd(k,n) = 1.</li>
-			  <li>Set i = k.</li>
-			  <li>Play song Si.</li>
-			  <li>Set i = i + k (mod n)</li>
-			  <li>If i != k, go to step 3.</li>
-			  <li>Go to step 1.</li>
-			  </ol>
+				<p>A possible algorithm on a playlist of n songs might be:</p>
+				
+				<ol>
+				<li>Find random k such that gcd(k,n) = 1.</li>
+				<li>Set i = k.</li>
+				<li>Play song Si.</li>
+				<li>Set i = i + k (mod n)</li>
+				<li>If i != k, go to step 3.</li>
+				<li>Go to step 1.</li>
+				</ol>
 			</blockquote>
 
 			<p>While it’s certainly a viable approach that can consistently be implemented in any language, it overcomplicates the initial problem.</p>
@@ -73,23 +73,24 @@
 			<pre><code>import random
 
 def randomize(playlist):
-    index = len(playlist) &gt;&gt; 1
+	index = len(playlist) &gt;&gt; 1
 
-    left = playlist[:index]
-    right = playlist[index:]
+	left = playlist[:index]
+	right = playlist[index:]
 
-    random.shuffle(left)
-    random.shuffle(right)
+	random.shuffle(left)
+	random.shuffle(right)
 
-    return left + right
+	return left + right
 
 if __name__ == '__main__':
-    playlist = ["Shot Me Down", "Crackin", "Gecko", "Raveology", "Rockin", "Ruby", "Black Smoke", "Colors", "We Like To Party", "I Got U", "Alright 2014", "Lion", "Waves", "Do It"]
+	playlist = ["Shot Me Down", "Crackin", "Gecko", "Raveology", "Rockin", "Ruby", "Black Smoke",
+	"Colors", "We Like To Party", "I Got U", "Alright 2014", "Lion", "Waves", "Do It"]
 
-    print playlist
-    print randomize(playlist)
+	print playlist
+	print randomize(playlist)
 			</code></pre>
-	</div>
+		</div>
 	</section>
 	<section class="about">
 		<header>
