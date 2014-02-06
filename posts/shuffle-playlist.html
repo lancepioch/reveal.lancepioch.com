@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shuffling Playlists | Lance Pioch</title>
+	<meta name="keywords" content="lance,pioch,home,programmer,developer,entrepreneur" />
+	<meta name="description" content="Lance Pioch is a very experienced developer and programmer." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<script type="text/javascript" src="/javascripts/instantclick.min.js"></script>
+</head>
+<body onload="InstantClick.init();">
+	<nav>
+		<ul>
+			<li class="home"><a href="/index.html" data-instant>Home</a></li>
+			<li class="about"><a href="/about.html" data-instant>About</a></li>
+			<li class="services"><a href="/services.html" data-instant>Services</a></li>
+			<li class="blog"><a href="/posts.html" data-instant>Posts</a></li>
+			<li class="contact"><a href="/contact.html" data-instant>Contact</a></li>
+		</ul>
+	</nav>
+	<section class="portfolio">
+		<header>
+			<span class="icon"><i class="fa fa-pencil"></i></span>
+			<h1>Randomizing Playlists</h1>
+		</header>
+	</section>
+	<section class="welcome">
+	<div>
+		<h2 id="the-article">The Reference</h2>
+
+			<p>(<a href="http://ssodelta.wordpress.com/2014/01/31/how-to-shuffle-a-playlist-correctly/">found here</a>)</p>
+
+			<blockquote>
+			  <p>A possible algorithm on a playlist of n songs might be:  </p>
+			  
+			  <ol>
+			  <li>Find random k such that gcd(k,n) = 1.</li>
+			  <li>Set i = k.</li>
+			  <li>Play song Si.</li>
+			  <li>Set i = i + k (mod n)</li>
+			  <li>If i != k, go to step 3.</li>
+			  <li>Go to step 1.</li>
+			  </ol>
+			</blockquote>
+
+			<p>While it’s certainly a viable approach that can consistently be implemented in any language, it overcomplicates the initial problem.</p>
+
+			<h2 id="a-simpler-approach">A Simpler Approach</h2>
+
+			<p>When someone wants their playlist to be randomized, most people want their items to keep playing continuously but without repeating any songs. We can start off with a very simple approach of plopping all our playlist items into an array and shuffling that array. When the end of the playlist is reached, reshuffle the array.</p>
+
+			<p>However we quickly run into the same problem: what if the last item becomes the first or the second position of the new array? How can we appropriately handle that while still keeping this concept of a simple approach?</p>
+
+			<p>Easy, we pick an arbitrary number of songs that we believe is “far” enough a split, so that the person is happy that songs are not repeating. We can pick a percentage, such as 50% and always split the array in half then shuffle and alternate the halves. This will work for any size array, the small and the big ones.</p>
+
+			<p>Assuming we have the array S of playlist items and we are starting the playlist anew:</p>
+
+			<ol>
+			<li>Set i = n &gt;&gt; 1 where n is the length of S</li>
+			<li>Shuffle array S0…Si and array Si+1…Sn-1</li>
+			<li>Join the arrays if they were split</li>
+			</ol>
+
+			<p>The bit shift is simply a division by 2 and dropping the remainder all in one step.</p>
+
+			<p>Most languages have their own version of an array shuffle that is optimized for that language. It’s very wise to acknowledge and use these implementations for performance reasons. Here’s an example in Python using the builtin random module.</p>
+
+			<h3 id="code">Code:</h3>
+
+			<pre><code>import random
+
+def randomize(playlist):
+    index = len(playlist) &gt;&gt; 1
+
+    left = playlist[:index]
+    right = playlist[index:]
+
+    random.shuffle(left)
+    random.shuffle(right)
+
+    return left + right
+
+if __name__ == '__main__':
+    playlist = ["Shot Me Down", "Crackin", "Gecko", "Raveology", "Rockin", "Ruby", "Black Smoke", "Colors", "We Like To Party", "I Got U", "Alright 2014", "Lion", "Waves", "Do It"]
+
+    print playlist
+    print randomize(playlist)
+			</code></pre>
+	</div>
+	</section>
+	<section class="about">
+		<header>
+			<span class="icon"><i class="fa fa-comments"></i></span>
+			<h2></h2>
+		</header>
+		<script type="text/javascript">var disqus_shortname = 'lancepioch';</script>
+		<script type="text/javascript" src="https://go.disqus.com/embed.js" async></script>
+		<div id="disqus_thread"></div>
+	</section>
+	<footer>Copyright &copy; Lance Pioch 2014</footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Why Use PHP Frameworks | Lance Pioch</title>
+	<meta name="keywords" content="lance,pioch,home,programmer,developer,entrepreneur" />
+	<meta name="description" content="Lance Pioch is a very experienced developer and programmer." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<script type="text/javascript" src="/javascripts/instantclick.min.js"></script>
+</head>
+<body onload="InstantClick.init();">
+	<nav>
+		<ul>
+			<li class="home"><a href="/index.html" data-instant>Home</a></li>
+			<li class="about"><a href="/about.html" data-instant>About</a></li>
+			<li class="services"><a href="/services.html" data-instant>Services</a></li>
+			<li class="blog"><a href="/posts.html" data-instant>Posts</a></li>
+			<li class="contact"><a href="/contact.html" data-instant>Contact</a></li>
+		</ul>
+	</nav>
+	<section class="php">
+		<header>
+			<span class="icon"><i class="fa fa-pencil"></i></span>
+			<h1>PHP Framework or Not?</h1>
+		</header>
+	</section>
+	<section class="welcome">
+	<div>
+		<h2 id="reasons-for">Reasons For</h2>
+
+		<h3 id="open-source">Open Source</h3>
+
+		<p>Most of the code in your project will be from the framework itself. This is true even if the project you're doing is proprietary code. The fact is, you get the benefit of having hundreds or thousands of people already testing and using this code to its limit.</p>
+
+		<h3 id="updates">Updates</h3>
+
+		<p>Because the framework is open source, updates are released continuously with security and bug fixes. Updating to the latest changes usually takes no more than a <code>composer update</code> and possibly a few lines of code having to be changed.</p>
+
+		<h3 id="your-mistakes">Your Mistakes</h3>
+
+		<p>While you'll probably only make the same number of mistakes as everybody else usually does, you won't have their help with maintaining your application, unless it is open source <strong>and</strong> popular.</p>
+
+		<h3 id="security">Security</h3>
+
+		<p>Changes are, you have an application that requires a user to login, or to authenticate themselves in some way. At the very least, you'll be accepting inputs from your mysterious average user. Copying your own code or other's code to do this each time can result in glaring holes of security. Sometimes it's better to use the libraries that already sanitize inputs for you, some automatically too.</p>
+
+		<h2 id="reasons-against">Reasons Against</h2>
+
+		<h3 id="speed">Speed</h3>
+
+		<p>Unless you're utilizing <a href="http://phalconphp.com">Phalcon</a>, then most likely you will see noticeable performance hits of as low as 200ms to as high as 2000ms. Each framework has its own benchmarks and speed comparisons, but sometimes it really does matter if have the need for speed. Serving up pages faster doesn't just mean benefits for your users, but it also means that your web server isn't spending as much time with other users as it could be.</p>
+
+		<p><img src="http://i.imgur.com/U5VxlOi.png" alt="Peformance Benchmark of PHP Frameworks" title=""></p>
+
+		<p>If you're running a processing intensive application or do not have a majority of users, then the extra hundred milliseconds isn't going to harm anyone. However if you have hundreds of people every several minutes, then it could cut your bill in half if you're using a server with a very expensive processor.</p>
+
+		<h3 id="others-mistakes">Others' Mistakes</h3>
+
+		<p>Whether you like it or not, you'll always be using someone else's code, guaranteed or your money back. But whether or not you are a beginner or an expert of 30 years, there's always mistakes to be made, by you and everyone else.</p>
+	</div>
+	</section>
+	<section class="about">
+		<header>
+			<span class="icon"><i class="fa fa-comments"></i></span>
+			<h2></h2>
+		</header>
+		<script type="text/javascript">var disqus_shortname = 'lancepioch';</script>
+		<script type="text/javascript" src="https://go.disqus.com/embed.js" async></script>
+		<div id="disqus_thread"></div>
+	</section>
+	<footer>Copyright &copy; Lance Pioch 2014</footer>
+</body>
+</html>
