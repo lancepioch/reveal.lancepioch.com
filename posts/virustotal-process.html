@@ -30,19 +30,19 @@
 	</section>
 	<section class="welcome">
 		<div>
-			<p><img src="http://i.imgur.com/5oHMeMz.png" alt="Example of Process List" title=""></p>
+			<p><img src="https://i.imgur.com/5oHMeMz.png" alt="Example of Process List" title=""></p>
 
 			<h2 id="the-catalyst">The Catalyst</h2>
 
-			<p><a href="http://technet.microsoft.com/en-us/sysinternals/bb896653">Process Explorer v16.0</a> has just been released and includes a very neat function. It allows you to select one option and it automatically checks each of your processes online using VirusTotal's service. While this certainly won't catch any of the brand new viruses, it can very quickly tell you with a high accuracy if you are running any questionable processes.</p>
+			<p><a href="https://technet.microsoft.com/en-us/sysinternals/bb896653">Process Explorer v16.0</a> has just been released and includes a very neat function. It allows you to select one option and it automatically checks each of your processes online using VirusTotal's service. While this certainly won't catch any of the brand new viruses, it can very quickly tell you with a high accuracy if you are running any questionable processes.</p>
 
 			<p>The new Windows 8 task manager is very spiffy and not only looks nice, but functions better too. I really don't want to replace it just to have this one useful function. And that's exactly the perfect reason for a do it yourself project here!</p>
 
 			<h2 id="retrieving-processes">Retrieving Processes</h2>
 
-			<p>The first thing to start off with is the best way to reliably get the processes list off Windows. For Linux you'll want to see this <a href="http://stackoverflow.com/questions/2703640/process-list-on-linux-via-python">StackOverflow discussion</a>.</p>
+			<p>The first thing to start off with is the best way to reliably get the processes list off Windows. For Linux you'll want to see this <a href="https://stackoverflow.com/questions/2703640/process-list-on-linux-via-python">StackOverflow discussion</a>.</p>
 
-			<p>After a bit of googling, it seems that a really good way is to use <a href="http://technet.microsoft.com/en-us/library/bb742610.aspx">WMIC</a> and simply pipe it in. The command would be: <code>wmic process</code>. This will give you a huge list with every single detail that you'd find in Task Manager all running through your command line. Not exactly what we want. We only really care about two things, the name of the process and its physical file location. To do that, we enhance what we already had: <code>wmic process get description,executablepath</code>. Bam, a list of just minimally what we want.</p>
+			<p>After a bit of googling, it seems that a really good way is to use <a href="https://technet.microsoft.com/en-us/library/bb742610.aspx">WMIC</a> and simply pipe it in. The command would be: <code>wmic process</code>. This will give you a huge list with every single detail that you'd find in Task Manager all running through your command line. Not exactly what we want. We only really care about two things, the name of the process and its physical file location. To do that, we enhance what we already had: <code>wmic process get description,executablepath</code>. Bam, a list of just minimally what we want.</p>
 
 			<p>Now to get that into python, we'll need to make usage of subprocess.Popen. The first argument being our command, the next setting <code>shell=True</code> and teh last having our <code>stdout=subprocess.PIPE</code> so we can pipe the output. The stdout of the subprocess returns a File object. It's as simple as using readline or a for loop.</p>
 
@@ -78,7 +78,7 @@ def getProcesses():
 
 			<p>VirusTotal says that they accept md5, sha1, and sha256 hashes of files. I chose to use sha256, but you can just as easily change it to md5 or sha1 because we're going to be using hashlib, and VirusTotal determines the hash type from its length.</p>
 
-			<p>Best way to get a file's hash? Well for all I know, you could be running a huge game or some other process. We need a reliable way to parse through a file's contents and hash it. A little bit of searching turns up this <a href="http://stackoverflow.com/questions/3431825/python-generating-a-md5-checksum-of-a-file">StackOverflow answer</a>. The only difference is that we want the hexdigest instead of the actual binary.</p>
+			<p>Best way to get a file's hash? Well for all I know, you could be running a huge game or some other process. We need a reliable way to parse through a file's contents and hash it. A little bit of searching turns up this <a href="https://stackoverflow.com/questions/3431825/python-generating-a-md5-checksum-of-a-file">StackOverflow answer</a>. The only difference is that we want the hexdigest instead of the actual binary.</p>
 
 			<h3 id="code-1">Code:</h3>
 
