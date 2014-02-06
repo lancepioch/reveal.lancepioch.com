@@ -76,11 +76,15 @@ a  {
 a:hover  {
 	color: #ccc;
 	text-decoration: none;
- }
+}
 
- code {
- 	overflow: auto;
- }
+p a {
+	border-bottom: 1px dashed;
+}
+
+code {
+	overflow: auto;
+}
 
 section {
 	width: 100%;
