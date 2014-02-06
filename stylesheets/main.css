@@ -101,13 +101,17 @@ section.quarter.right { margin-left: 10px; margin-right: 0px; }
 
 .social {
 	text-align: center;
-	line-height: 130px;
+	line-height: 110px;
 	height: 150px;
+}
+
+.link {
 	padding: 0px;
 }
 
 .link > a {
 	display: block;
+	padding: 20px;
 	width: 100%;
 	height: 100%;
 }
