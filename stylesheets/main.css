@@ -99,6 +99,9 @@ section.quarter { width: calc(100% / 4 - 15px); margin-left: 10px; margin-right:
 section.quarter.left { margin-left: 0px; margin-right: 10px; }
 section.quarter.right { margin-left: 10px; margin-right: 0px; }
 
+.single { height: 250px; }
+.double { height: 520px; float: right; }
+
 .social {
 	text-align: center;
 	line-height: 110px;
@@ -132,6 +135,48 @@ section.quarter.right { margin-left: 10px; margin-right: 0px; }
 	width: 65%;
 	height: 100%;
 	float: right;
+}
+
+#message button {
+	height: 60px;
+	color: #fff;
+	width: 100%;
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: 300;
+	background-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+	cursor: hand;
+	margin-top: 50px;
+}
+
+#message button:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+#message input {
+	height: 30px;
+}
+
+#message textarea {
+	height: 100px;
+}
+
+#message input, #message textarea {
+	margin-bottom: 15px;
+	width: 100%;
+	color: #fff;
+	border: none;
+	border-bottom: 1px solid #fff;
+	font-size: 16px;
+	line-height: 23px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#message input:focus, #message textarea:focus {
+	color: #000;
+	background-color: #fff;
 }
 
 .home { background-color: #e74c3c; }
