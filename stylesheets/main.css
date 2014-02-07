@@ -107,6 +107,8 @@ section.quarter { width: calc(100% / 4 - 15px); margin-left: 10px; margin-right:
 section.quarter.left { margin-left: 0px; margin-right: 10px; }
 section.quarter.right { margin-left: 10px; margin-right: 0px; }
 
+.center { text-align: center; }
+
 .single { height: 250px; }
 .double { height: 520px; float: right; }
 
