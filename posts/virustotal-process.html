@@ -6,11 +6,11 @@
 	<meta name="keywords" content="lance,pioch,home,programmer,developer,entrepreneur" />
 	<meta name="description" content="Lance Pioch is a very experienced developer and programmer." />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 	<!--[if lt IE 9]>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
 		<script type="text/javascript" src="/javascripts/respond.min.js"></script>
 	<![endif]-->
 	<script>
@@ -41,19 +41,19 @@
 	</section>
 	<section class="article-body">
 		<div>
-			<p><img src="https://i.imgur.com/5oHMeMz.png" alt="Example of Process List" title=""></p>
+			<p><img src="//i.imgur.com/5oHMeMz.png" alt="Example of Process List" title=""></p>
 
 			<h2 id="the-catalyst">The Catalyst</h2>
 
-			<p><a href="https://technet.microsoft.com/en-us/sysinternals/bb896653">Process Explorer v16.0</a> has just been released and includes a very neat function. It allows you to select one option and it automatically checks each of your processes online using VirusTotal's service. While this certainly won't catch any of the brand new viruses, it can very quickly tell you with a high accuracy if you are running any questionable processes.</p>
+			<p><a href="//technet.microsoft.com/en-us/sysinternals/bb896653">Process Explorer v16.0</a> has just been released and includes a very neat function. It allows you to select one option and it automatically checks each of your processes online using VirusTotal's service. While this certainly won't catch any of the brand new viruses, it can very quickly tell you with a high accuracy if you are running any questionable processes.</p>
 
 			<p>The new Windows 8 task manager is very spiffy and not only looks nice, but functions better too. I really don't want to replace it just to have this one useful function. And that's exactly the perfect reason for a do it yourself project here!</p>
 
 			<h2 id="retrieving-processes">Retrieving Processes</h2>
 
-			<p>The first thing to start off with is the best way to reliably get the processes list off Windows. For Linux you'll want to see this <a href="https://stackoverflow.com/questions/2703640/process-list-on-linux-via-python">StackOverflow discussion</a>.</p>
+			<p>The first thing to start off with is the best way to reliably get the processes list off Windows. For Linux you'll want to see this <a href="//stackoverflow.com/questions/2703640/process-list-on-linux-via-python">StackOverflow discussion</a>.</p>
 
-			<p>After a bit of googling, it seems that a really good way is to use <a href="https://technet.microsoft.com/en-us/library/bb742610.aspx">WMIC</a> and simply pipe it in. The command would be: <code>wmic process</code>. This will give you a huge list with every single detail that you'd find in Task Manager all running through your command line. Not exactly what we want. We only really care about two things, the name of the process and its physical file location. To do that, we enhance what we already had: <code>wmic process get description,executablepath</code>. Bam, a list of just minimally what we want.</p>
+			<p>After a bit of googling, it seems that a really good way is to use <a href="//technet.microsoft.com/en-us/library/bb742610.aspx">WMIC</a> and simply pipe it in. The command would be: <code>wmic process</code>. This will give you a huge list with every single detail that you'd find in Task Manager all running through your command line. Not exactly what we want. We only really care about two things, the name of the process and its physical file location. To do that, we enhance what we already had: <code>wmic process get description,executablepath</code>. Bam, a list of just minimally what we want.</p>
 
 			<p>Now to get that into python, we'll need to make usage of subprocess.Popen. The first argument being our command, the next setting <code>shell=True</code> and teh last having our <code>stdout=subprocess.PIPE</code> so we can pipe the output. The stdout of the subprocess returns a File object. It's as simple as using readline or a for loop.</p>
 
@@ -89,7 +89,7 @@ def getProcesses():
 
 			<p>VirusTotal says that they accept md5, sha1, and sha256 hashes of files. I chose to use sha256, but you can just as easily change it to md5 or sha1 because we're going to be using hashlib, and VirusTotal determines the hash type from its length.</p>
 
-			<p>Best way to get a file's hash? Well for all I know, you could be running a huge game or some other process. We need a reliable way to parse through a file's contents and hash it. A little bit of searching turns up this <a href="https://stackoverflow.com/questions/3431825/python-generating-a-md5-checksum-of-a-file">StackOverflow answer</a>. The only difference is that we want the hexdigest instead of the actual binary.</p>
+			<p>Best way to get a file's hash? Well for all I know, you could be running a huge game or some other process. We need a reliable way to parse through a file's contents and hash it. A little bit of searching turns up this <a href="//stackoverflow.com/questions/3431825/python-generating-a-md5-checksum-of-a-file">StackOverflow answer</a>. The only difference is that we want the hexdigest instead of the actual binary.</p>
 
 			<h3 id="code-1">Code:</h3>
 
@@ -115,7 +115,7 @@ def sha(filepath):
 
 			<h2 id="hashing-in-parallel">Hashing in Parallel</h2>
 
-			<p>I'm honestly going to just direct you to this great article, "<a href="https://medium.com/building-things-on-the-internet/40e9b2b36148">Parallelism in one line</a>" and implement the very simple solution they have. They have explained it very well.</p>
+			<p>I'm honestly going to just direct you to this great article, "<a href="//medium.com/building-things-on-the-internet/40e9b2b36148">Parallelism in one line</a>" and implement the very simple solution they have. They have explained it very well.</p>
 
 			<h3 id="code-3">Code:</h3>
 
@@ -141,7 +141,7 @@ def hashParallel(paths, threads=2):
 			<li>Get your API key</li>
 			</ol>
 
-			<p>You can find out most of this information on their website. We need a comma separated string containing the hashes, and the apikey to post to their api url which is <code>https://www.virustotal.com/vtapi/v2/file/report</code>. We'll be using urllib2 to send the request and urllib to encode the parameters.</p>
+			<p>You can find out most of this information on their website. We need a comma separated string containing the hashes, and the apikey to post to their api url which is <code>//www.virustotal.com/vtapi/v2/file/report</code>. We'll be using urllib2 to send the request and urllib to encode the parameters.</p>
 
 			<h3 id="code-4">Code:</h3>
 
@@ -149,7 +149,7 @@ def hashParallel(paths, threads=2):
 
 def filesReport(apikey, hashlist):
     hashes = ', '.join(hashlist)
-    url = "https://www.virustotal.com/vtapi/v2/file/report"
+    url = "//www.virustotal.com/vtapi/v2/file/report"
     parameters = {"resource": hashes, "apikey": apikey}
     data = urllib.urlencode(parameters)
     req = urllib2.Request(url, data)
@@ -185,8 +185,8 @@ if __name__ == "__main__":
         print n + " = " + str(f["positives"]) + " / " + str(f["total"])
 			</code></pre>
 		</div>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/monokai_sublime.min.css">
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/monokai_sublime.min.css">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
 		<script>hljs.initHighlighting();</script>
 	</section>
 	<section class="article-comments">
@@ -195,9 +195,9 @@ if __name__ == "__main__":
 			<h2></h2>
 		</header>
 		<script type="text/javascript">var disqus_shortname = 'lancepioch';</script>
-		<script type="text/javascript" src="https://go.disqus.com/embed.js" async></script>
+		<script type="text/javascript" src="//go.disqus.com/embed.js" async></script>
 		<div id="disqus_thread"></div>
 	</section>
-	<footer>Copyright &copy; <a href="https://plus.google.com/+LancePioch?rel=author">Lance Pioch</a> 2014</footer>
+	<footer>Copyright &copy; <a href="//plus.google.com/+LancePioch?rel=author">Lance Pioch</a> 2014</footer>
 </body>
 </html>
