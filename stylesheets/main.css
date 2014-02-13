@@ -292,4 +292,9 @@ section > div img {
 	#main > div > img {
 		margin-left: -110px;
 	}
+	section.quarter.link {
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
