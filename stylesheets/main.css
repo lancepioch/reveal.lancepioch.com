@@ -127,6 +127,10 @@ section.quarter.right { margin-left: 10px; margin-right: 0px; }
 	padding: 0px;
 }
 
+.link:hover, nav li:hover {
+    opacity: 0.8;
+}
+
 .link > a {
 	display: block;
 	padding: 20px;
